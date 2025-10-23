@@ -10,3 +10,4 @@
   # 3. Ensure all errors print the correct message and don’t crash the program.
   # 4. Properly maintain the history list and print results with the correct ID order.
   # 5. Test the program with different valid and invalid expressions to confirm the evaluator behaves as required.
+  
