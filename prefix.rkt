@@ -110,3 +110,28 @@
           (if (null? remaining)
               (car result)
               #f)))))
+
+(define (eval-loop history)
+  (when interactive?
+    (display "> ")
+    (flush-output))
+  
+  (let [(input (read-line))]
+    (cond
+      [(eof-object? input) (void)] 
+      [(string=? (string-trim input) "quit") (void)] 
+      [else
+       (let [(result (eval-expression input history))]
+         (if result
+             (let* [(new-history (cons result history))
+                    (history-id (length new-history))
+                    (float-result (real->double-flonum result))]
+               (display history-id)
+               (display ": ")
+               (displayln float-result)
+               (eval-loop new-history))
+             (begin
+               (displayln "Error: Invalid Expression")
+               (eval-loop history))))])))
+
+(eval-loop '())
