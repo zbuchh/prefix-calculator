@@ -29,3 +29,19 @@
     (if (string=? (car result) "")
         (cons #f chars)
         (cons (string->number (car result)) (cadr result)))))
+
+(define (read-history-ref chars)
+  (let [(chars (skip-whitespace chars))]
+    (if (and (not (null? chars)) (char=? (car chars) #\$))
+        (let [(num-result (read-number (cdr chars)))]
+          (if (car num-result)
+              num-result
+              (cons #f chars)))
+        (cons #f chars))))
+
+(define (get-history-value id history)
+  (let [(rev-history (reverse history))
+        (index (- id 1))]
+    (if (and (>= index 0) (< index (length history)))
+        (list-ref rev-history index)
+        #f)))
