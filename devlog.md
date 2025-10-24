@@ -1,4 +1,4 @@
-## October 18, 2025 10:00 AM
+## October 18, 2025 - 10:00 AM
 
 - In this session, I am starting to set up my project. Regarding the project, I know that I have to build prefix-notation expression calculator in Racket. The project should be able to run in two modes: Interactive and Batch.
 - In interactive mode, the program prompts the user for input, while in batch mode (triggered with the “-b” or “--batch” flag), it reads expressions without showing prompts, only the results and error messages are printed.
@@ -13,7 +13,7 @@
   5. Test the program with different valid and invalid expressions to confirm the evaluator behaves as required.
   
 
-## October 18, 2025 1:00 PM
+## October 18, 2025 - 1:00 PM
 
 # Thoughts So Far
 - I am starting the project in the rkt file.
@@ -31,7 +31,7 @@
 - Implement read-number function with helper read-digits.
 - Commit after testing number parsing.
   
-## October 18, 2025 3:00 PM
+## October 18, 2025 - 3:00 PM
 
 # Reflections
 - Mode detection works successfully.
@@ -61,6 +61,25 @@
 # Reflections
 - This session was quite easy and short. I just implemented the read-history-ref and get-history-value functions in the racket file.
 - I accomplished my goal since the history functions work as expected.
+- Implemented read-history-ref function
+- Created get-history-value function which:
+  - Reverses history list 
+  - Converts 1-indexed ID to 0-indexed list access
+  - Validates ID is in valid range
+  - Returns #f for invalid IDs
+- Added $n case to parse-expr
+  - Parses history reference
+  - Looks up value in history
+  - Returns error if invalid
+- History system fully functional!
+
+Problems Encountered:
+- Had to remember history is stored newest-first due to cons
+- Need to reverse before indexing
+- Index conversion: user sees 1-indexed, list uses 0-indexed
+- Testing revealed all edge cases working correctly
+
+
 # Next Steps
 - I need to build recursive parse-expr.
 - I have to include operators and handle divide-by-zero issue.
@@ -87,5 +106,18 @@
 - Unary vs binary distinction handled.
 # Next Steps
 - Implement eval-expression to ensure full input is consumed.
+
+# October 20, 2025 – 6:00 PM
+
+# Thoughts So Far
+- Must ensure expressions are fully consumed; trailing characters are invalid.
+
+# Session Goals
+- I will Implement a function called eval-expression in the next session.
+- Commit after testing.
+
+
+
+  
 
   
