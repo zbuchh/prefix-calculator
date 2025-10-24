@@ -1,9 +1,9 @@
 ## October 18, 2025 10:00 AM
 
-In this session, I am starting to set up my project. Regarding the project, I know that I have to build prefix-notation expression calculator in Racket. The project should be able to run in two modes: Interactive and Batch.
-In interactive mode, the program prompts the user for input, while in batch mode (triggered with the “-b” or “--batch” flag), it reads expressions without showing prompts, only the results and error messages are printed.
-The goals of this project is to create a program that evaluates prefix expressions and to keep track of previous results in history. The user should be able to enter expressions involving addition, multiplication, integer division, and unary negation, as well as reference previous results using the `$n` notation.
-Each successful evaluation should be stored in a history list, with each result assigned an incremental ID (1, 2, 3, …). Results are printed as `<id>: <float value>`, and errors should display as `Error: Invalid Expression`. Division by zero, invalid syntax, or bad history references should all trigger an error message.
+- In this session, I am starting to set up my project. Regarding the project, I know that I have to build prefix-notation expression calculator in Racket. The project should be able to run in two modes: Interactive and Batch.
+- In interactive mode, the program prompts the user for input, while in batch mode (triggered with the “-b” or “--batch” flag), it reads expressions without showing prompts, only the results and error messages are printed.
+- The goals of this project is to create a program that evaluates prefix expressions and to keep track of previous results in history. The user should be able to enter expressions involving addition, multiplication, integer division, and unary negation, as well as reference previous results using the `$n` notation.
+- Each successful evaluation should be stored in a history list, with each result assigned an incremental ID (1, 2, 3, …). Results are printed as `<id>: <float value>`, and errors should display as `Error: Invalid Expression`. Division by zero, invalid syntax, or bad history references should all trigger an error message.
 
 # My main plan is:
   1. Implement reliable expression parsing that handles whitespace and nested prefix expressions.
@@ -56,6 +56,14 @@ Each successful evaluation should be stored in a history list, with each result 
 - Implement get-history-value.
 - Commit after verifying history works.
 
+## October 18, 2025 – 7:30 PM
 
+# Reflections
+- This session was quite easy and short. I just implemented the read-history-ref and get-history-value functions in the racket file.
+- I accomplished my goal since the history functions work as expected.
+# Next Steps
+- I need to build recursive parse-expr.
+- I have to include operators and handle divide-by-zero issue.
+- As well as add unary negation -.
 
   
