@@ -138,9 +138,21 @@ Problems Encountered:
 - Handle errors gracefully.
 - Commit after testing interactive and batch modes.
 
+# October 22, 2025 – 7:00 PM
+
+# Reflections
+- Interactive and batch modes work.
+- History references resolve correctly.
+- Operators handle errors, including divide-by-zero.
+- Float conversion ensures consistent output.
+
+# Next Steps
+- Test complex nested expressions in batch mode.
+- Test each operator individually
+- Test complex nested expressions
+- Test all error cases
+- Verify output formatting
 
 
-
-  
 
   
