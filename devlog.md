@@ -78,4 +78,14 @@
 - I also have to handle divide-by-zero.
 - Commit after testing.
 
+# October 19, 2025 – 5:00 PM
+
+# Reflections
+- This session was long and dificult to implment since I had to build the logic for the operators. I implemented the parse-expr chars history function in the racket file.
+- All operators implemented.
+- Extra characters produce errors as expected.
+- Unary vs binary distinction handled.
+# Next Steps
+- Implement eval-expression to ensure full input is consumed.
+
   
