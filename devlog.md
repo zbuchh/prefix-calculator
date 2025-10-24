@@ -44,5 +44,18 @@ Each successful evaluation should be stored in a history list, with each result 
 - Create read-history-ref function.
 - Create get-history-value function.
 
+## October 18, 2025 – 6:00 PM
+
+# Thoughts So Far
+- History references allow access to previous results.
+- Must align 1-indexed user references with list indexing.
+- Reversing the list is necessary for newest-first storage.
+
+# Session Goals
+- Implement read-history-ref.
+- Implement get-history-value.
+- Commit after verifying history works.
+
+
 
   
