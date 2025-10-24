@@ -100,3 +100,13 @@
       
       [else (cons #f chars)])))
 
+(define (eval-expression expr-str history)
+  (let* [(chars (string->list expr-str))
+         (result (parse-expr chars history))]
+    (if (not (car result))
+        #f
+       
+        (let [(remaining (skip-whitespace (cdr result)))]
+          (if (null? remaining)
+              (car result)
+              #f)))))
