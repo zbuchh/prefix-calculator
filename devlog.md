@@ -153,6 +153,29 @@ Problems Encountered:
 - Test all error cases
 - Verify output formatting
 
+# October 24, 2025 – 3:00 PM
+
+# Thoughts So Far
+All core features of the prefix-notation calculator are complete. Addition, multiplication, division, and unary negation work as expected. The history system using $n references is fully functional, with proper handling of invalid IDs. Interactive and batch modes are correctly implemented.
+
+# Session Goals
+- Verifying all operators with complex nested expressions.
+- Testing error handling for invalid input, extra characters, and divide-by-zero.
+- Confirming batch mode execution works from the command line.
+- Preparing a concise README with usage instructions and description of the program.
+- Conduct final comprehensive testing of all calculator features.
+- Run batch mode tests to confirm correct behavior without interactive prompts.
+
+# Plan:
+- Open a terminal and run several batch mode test cases to confirm output matches expectations.
+- Walk through a set of interactive test expressions, including nested and invalid cases.
+- Edit the code to remove unnecessary inline comments or debugging messages.
+- Create README.md and include:
+   - Project overview.
+   - Instructions for running in both modes.
+   - Examples of valid and invalid input.
+
+
 
 
   
