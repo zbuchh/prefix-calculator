@@ -116,6 +116,29 @@ Problems Encountered:
 - I will Implement a function called eval-expression in the next session.
 - Commit after testing.
 
+# October 20, 2025 – 7:00 PM
+
+# Reflections
+- Works perfectly; invalid expressions return #f.
+- I am ready to implement main eval-loop.
+
+# Next Steps
+- Build eval-loop for interactive input, history, and float formatting.
+
+# October 22, 2025 – 5:00 PM
+
+# Thoughts So Far
+- Everything parses correctly.
+- Eval-loop manages input, history, and batch mode.
+- Convert results to float for consistent output.
+
+# Session Goals
+- I need to implement the eval-loop.
+- Display results with history ID.
+- Handle errors gracefully.
+- Commit after testing interactive and batch modes.
+
+
 
 
   
