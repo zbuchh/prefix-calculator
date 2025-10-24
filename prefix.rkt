@@ -13,3 +13,19 @@
     [(null? chars) '()]
     [(char-whitespace? (car chars)) (skip-whitespace (cdr chars))]
     [else chars]))
+
+(define (read-number chars)
+  (define (read-digits chars acc)
+    (cond
+      [(null? chars) (list acc '())]
+      [(char-numeric? (car chars))
+       (read-digits (cdr chars) (string-append acc (string (car chars))))]
+      [else (list acc chars)]))
+  
+  (let* [(chars (skip-whitespace chars))
+         (result (if (null? chars)
+                     (list "" '())
+                     (read-digits chars "")))]
+    (if (string=? (car result) "")
+        (cons #f chars)
+        (cons (string->number (car result)) (cadr result)))))
