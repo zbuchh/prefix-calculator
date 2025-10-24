@@ -66,4 +66,16 @@
 - I have to include operators and handle divide-by-zero issue.
 - As well as add unary negation -.
 
+# October 19, 2025 – 1:00 PM
+
+# Thoughts So Far
+- Recursive parsing is logical.
+- Binary operators follow the same recursive pattern.
+- Division requires zero-check; unary negation is different (one operand).
+
+# Session Goals
+- I plan on implementing parse-expr for all arithmetic operators.
+- I also have to handle divide-by-zero.
+- Commit after testing.
+
   
