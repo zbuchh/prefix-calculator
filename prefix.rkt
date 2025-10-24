@@ -45,3 +45,58 @@
     (if (and (>= index 0) (< index (length history)))
         (list-ref rev-history index)
         #f)))
+
+(define (parse-expr chars history)
+  (let [(chars (skip-whitespace chars))]
+    (cond
+      [(null? chars) (cons #f chars)]
+      
+      [(char-numeric? (car chars))
+       (read-number chars)]
+      
+      [(char=? (car chars) #\$)
+       (let [(hist-result (read-history-ref chars))]
+         (if (car hist-result)
+             (let [(val (get-history-value (car hist-result) history))]
+               (if val
+                   (cons val (cdr hist-result))
+                   (cons #f chars)))
+             (cons #f chars)))]
+      
+      [(char=? (car chars) #\+)
+       (let* [(expr1 (parse-expr (cdr chars) history))]
+         (if (not (car expr1))
+             (cons #f chars)
+             (let [(expr2 (parse-expr (cdr expr1) history))]
+               (if (not (car expr2))
+                   (cons #f chars)
+                   (cons (+ (car expr1) (car expr2)) (cdr expr2))))))]
+      
+      [(char=? (car chars) #\*)
+       (let* [(expr1 (parse-expr (cdr chars) history))]
+         (if (not (car expr1))
+             (cons #f chars)
+             (let [(expr2 (parse-expr (cdr expr1) history))]
+               (if (not (car expr2))
+                   (cons #f chars)
+                   (cons (* (car expr1) (car expr2)) (cdr expr2))))))]
+      
+      [(char=? (car chars) #\/)
+       (let* [(expr1 (parse-expr (cdr chars) history))]
+         (if (not (car expr1))
+             (cons #f chars)
+             (let [(expr2 (parse-expr (cdr expr1) history))]
+               (if (not (car expr2))
+                   (cons #f chars)
+                   (if (= (car expr2) 0)
+                       (cons #f chars)
+                       (cons (quotient (car expr1) (car expr2)) (cdr expr2)))))))]
+      
+      [(char=? (car chars) #\-)
+       (let [(expr (parse-expr (cdr chars) history))]
+         (if (not (car expr))
+             (cons #f chars)
+             (cons (- (car expr)) (cdr expr))))]
+      
+      [else (cons #f chars)])))
+
