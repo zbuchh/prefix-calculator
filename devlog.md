@@ -34,27 +34,27 @@
 ## October 18, 2025 - 3:00 PM
 
 # Reflections
-- Mode detection works successfully.
-- No issues encountered.
+- The mode detection for interactive and batch works successfully.
+- I encountered no issues .
 - Parsing numbers and skipping whitespace fucntions work properly.
-- Successfully implemented number parsing and whitespace skipping.
+- I successfully implemented number parsing and whitespace skipping.
 - Learned that cons builds result-history pairs efficiently.
   
 # Next Steps
-- Create read-history-ref function.
-- Create get-history-value function.
+- I need to create a read-history-ref function with will handle the logic for accessing the history.
+- I also have to create a get-history-value function.
 
 ## October 18, 2025 – 6:00 PM
 
 # Thoughts So Far
 - History references allow access to previous results.
-- Must align 1-indexed user references with list indexing.
+- I need to align 1-indexed user references with list indexing.
 - Reversing the list is necessary for newest-first storage.
 
 # Session Goals
-- Implement read-history-ref.
-- Implement get-history-value.
-- Commit after verifying history works.
+- In this session I will implement a read-history-ref.
+- I will also Implement get-history-value.
+- Then I will commit after verifying history works.
 
 ## October 18, 2025 – 7:30 PM
 
@@ -72,12 +72,12 @@
   - Looks up value in history
   - Returns error if invalid
 - History system fully functional!
+- Testing revealed all edge cases working correctly
 
 Problems Encountered:
-- Had to remember history is stored newest-first due to cons
-- Need to reverse before indexing
+- I had to remember history is stored newest-first due to cons
+- I needed to reverse before indexing
 - Index conversion: user sees 1-indexed, list uses 0-indexed
-- Testing revealed all edge cases working correctly
 
 
 # Next Steps
@@ -105,7 +105,7 @@ Problems Encountered:
 - Extra characters produce errors as expected.
 - Unary vs binary distinction handled.
 # Next Steps
-- Implement eval-expression to ensure full input is consumed.
+- I have to implement a function called eval-expression to ensure full input is consumed.
 
 # October 20, 2025 – 6:00 PM
 
@@ -113,7 +113,7 @@ Problems Encountered:
 - Must ensure expressions are fully consumed; trailing characters are invalid.
 
 # Session Goals
-- I will Implement a function called eval-expression in the next session.
+- I will Implement a function called eval-expression.
 - Commit after testing.
 
 # October 20, 2025 – 7:00 PM
@@ -123,7 +123,7 @@ Problems Encountered:
 - I am ready to implement main eval-loop.
 
 # Next Steps
-- Build eval-loop for interactive input, history, and float formatting.
+- I will build a function called eval-loop for interactive input, history, and float formatting.
 
 # October 22, 2025 – 5:00 PM
 
@@ -134,8 +134,8 @@ Problems Encountered:
 
 # Session Goals
 - I need to implement the eval-loop.
-- Display results with history ID.
-- Handle errors gracefully.
+- I have to display results with history ID.
+- I also need to handle errors gracefully.
 - Commit after testing interactive and batch modes.
 
 # October 22, 2025 – 7:00 PM
@@ -174,6 +174,18 @@ All core features of the prefix-notation calculator are complete. Addition, mult
    - Project overview.
    - Instructions for running in both modes.
    - Examples of valid and invalid input.
+ 
+# October 24, 2025 – 11:30 PM
+
+# Reflections
+
+Today's session was the last one and it was focused on final validation and documentation. I successfully verified that all operators — including addition, multiplication, division, and unary negation — work correctly, even in complex nested expressions. Error handling for divide-by-zero, invalid syntax, and incorrect $n references performed exactly as expected. Batch mode testing confirmed that the program correctly suppresses prompts and only outputs results or error messages. Creating the README was simple, and it now clearly explains both interactive and batch modes with working examples. The overall structure of the code feels stable, readable, and modular. No major issues were encountered, and all the goals set for this session were achieved.
+
+# Next Steps
+At this stage, the calculator is feature-complete and ready for submission. The only remaining tasks are:
+- Verifying that all files (calculator.rkt, devlog.md, README.md) are committed and well-documented.
+- Preparing the repository for final submission by tagging the last commit as the release version.
+- Submitting a ZIP file with inlcudes calculator.rkt, devlog.md, and README.md
 
 
 
