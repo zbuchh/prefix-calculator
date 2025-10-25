@@ -70,6 +70,7 @@ $n works the same way as in interactive mode.
 
 Only the results and errors are printed; prompts are suppressed.
 
+---
 
 ### Notes on Expressions
 
@@ -84,6 +85,8 @@ Only the results and errors are printed; prompts are suppressed.
 - Whitespace can be used to separate tokens but is otherwise ignored.
 
 - Extra characters after a valid expression are considered errors. Example: + 1 2 3 is invalid.
+
+---
 
 ### Implementation Details
 
