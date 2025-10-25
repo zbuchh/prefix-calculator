@@ -70,16 +70,31 @@ $n works the same way as in interactive mode.
 
 Only the results and errors are printed; prompts are suppressed.
 
-## Notes on Expressions
 
-Expressions are prefix notation: operator comes first. Example: + 1 2 equals 3.
+### Notes on Expressions
 
-Binary operators (+, *, /) require exactly two operands.
+- Expressions are prefix notation: operator comes first. Example: + 1 2 equals 3.
 
-Unary negation (-) requires a single operand.
+- Binary operators (+, *, /) require exactly two operands.
 
-History references use $n, where n corresponds to the result ID.
+- Unary negation (-) requires a single operand.
 
-Whitespace can be used to separate tokens but is otherwise ignored.
+- History references use $n, where n corresponds to the result ID.
 
-Extra characters after a valid expression are considered errors. Example: + 1 2 3 is invalid.
+- Whitespace can be used to separate tokens but is otherwise ignored.
+
+- Extra characters after a valid expression are considered errors. Example: + 1 2 3 is invalid.
+
+### Implementation Details
+
+- Written in Racket using functional programming principles.
+
+- Recursive descent parser evaluates expressions character-by-character.
+
+- History is implemented as a list, with the most recent value at the front.
+
+- Command-line arguments determine interactive vs batch mode.
+
+- Results are converted to floats using real->double-flonum before printing.
+
+- Proper error handling ensures the program never crashes, even with invalid input.
