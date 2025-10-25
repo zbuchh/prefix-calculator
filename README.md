@@ -72,7 +72,7 @@ Only the results and errors are printed; prompts are suppressed.
 
 ---
 
-### Notes on Expressions
+## Notes on Expressions
 
 - Expressions are prefix notation: operator comes first. Example: + 1 2 equals 3.
 
@@ -88,7 +88,7 @@ Only the results and errors are printed; prompts are suppressed.
 
 ---
 
-### Implementation Details
+## Implementation Details
 
 - Written in Racket using functional programming principles.
 
