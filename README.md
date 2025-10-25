@@ -33,7 +33,7 @@ Run the program without arguments:
 racket calculator.rkt
 
 You will see a prompt >. Enter expressions in prefix notation:
----
+
 
 > + 1 2
 1: 3.0
