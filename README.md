@@ -70,3 +70,16 @@ $n works the same way as in interactive mode.
 
 Only the results and errors are printed; prompts are suppressed.
 
+## Notes on Expressions
+
+Expressions are prefix notation: operator comes first. Example: + 1 2 equals 3.
+
+Binary operators (+, *, /) require exactly two operands.
+
+Unary negation (-) requires a single operand.
+
+History references use $n, where n corresponds to the result ID.
+
+Whitespace can be used to separate tokens but is otherwise ignored.
+
+Extra characters after a valid expression are considered errors. Example: + 1 2 3 is invalid.
