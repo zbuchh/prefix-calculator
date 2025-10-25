@@ -31,8 +31,7 @@ Run the program without any arguments:
 
 ```bash
 racket calculator.rkt
-You will see a prompt >. Enter expressions in prefix notation:
-```
+
 
 > + 1 2
 1: 3.0
