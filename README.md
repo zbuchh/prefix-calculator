@@ -47,7 +47,7 @@ Type quit to exit interactive mode.
 ### Batch Mode
 
 Run the program with the -b or --batch flag:
-
+```bash
 racket calculator.rkt -b
 
 Input: + 3 4
