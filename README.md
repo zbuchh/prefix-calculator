@@ -38,6 +38,9 @@ racket calculator.rkt
 2: 12.0
 > quit
 
+```
+$n references the n-th result in history (1-indexed).
 
+Type quit to exit interactive mode.
 
 
