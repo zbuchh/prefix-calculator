@@ -103,3 +103,28 @@ Only the results and errors are printed; prompts are suppressed.
 - Proper error handling ensures the program never crashes, even with invalid input.
 
 ---
+
+## Project Files and Roles
+
+### calculator.rkt
+The main Racket program that implements the **prefix-notation calculator**.  
+- Handles **interactive** and **batch** modes.
+- Parses and evaluates **prefix expressions**.
+- Maintains a **history list** for `$n` references.
+- Provides **error handling** for invalid syntax, divide-by-zero, and invalid history references.
+
+### devlog.md
+A **development log** tracking the progress of the project.  
+- Records each session with **date and time**.
+- Notes thoughts, goals, accomplishments, problems encountered, and next steps.
+- Shows the evolution of the program and feature implementation.
+
+### README.md
+The project **documentation** file.  
+- Describes the **overview**, **features**, and **usage** of the calculator.
+- Provides examples for **interactive** and **batch modes**.
+- Explains history references and error handling.
+- Serves as a guide for using and understanding the project.
+
+
+
