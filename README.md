@@ -27,13 +27,10 @@ The calculator handles basic arithmetic, unary negation, and provides robust err
 ## Usage
 
 ### Interactive Mode
-Run the program without arguments:
+Run the program without any arguments:
 
 ```bash
 racket calculator.rkt
-
-You will see a prompt >. Enter expressions in prefix notation:
-
 
 > + 1 2
 1: 3.0
@@ -41,28 +38,6 @@ You will see a prompt >. Enter expressions in prefix notation:
 2: 12.0
 > quit
 
-$n references the n-th result in history (1-indexed).
 
-Type quit to exit interactive mode.
-
-Batch Mode
-Run the program with -b or --batch flag:
-
-racket calculator.rkt -b
-
-Input: + 3 4
-Output: 1: 7.0
-
-Input: * $1 2
-Output: 2: 14.0
-
-Input: / 10 0
-Output: Error: Invalid Expression
-
-Input: - 5
-Output: 3: -5.0
-
-Input: $99
-Output: Error: Invalid Expression
 
 
