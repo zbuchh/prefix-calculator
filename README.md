@@ -65,3 +65,8 @@ Output: 3: -5.0
 Input: $99
 Output: Error: Invalid Expression
 
+```
+$n works the same way as in interactive mode.
+
+Only the results and errors are printed; prompts are suppressed.
+
